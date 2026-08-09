@@ -1,0 +1,19 @@
+.nav ul {
+ list-style: none;
+    display:flex;
+    margin:10px
+}
+.nav ul li{
+    margin:30px
+
+
+}
+.nav{
+margin-left:200px;
+color:#EEEBDD;
+
+
+}
+.header{
+background-color:#630000;
+}
