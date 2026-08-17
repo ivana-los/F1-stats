@@ -1,0 +1,18 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Drivers</title>
+    <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
+</head>
+<body>
+{% for driver in drivers %}
+    <div class="card">
+        <img src="{{ driver.headshot_url }}">
+        <h3>{{ driver.full_name }}</h3>
+        <p>{{ driver.team_name }}</p>
+    </div>
+{% endfor %}
+</body>
+</html>

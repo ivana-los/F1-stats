@@ -2,10 +2,12 @@ from django.db import models
 
 
 class Driver(models.Model):
-    driver_id = models.CharField(max_length=50, unique=True)
+    driver_number = models.IntegerField(unique=True)
     full_name = models.CharField(max_length=100)
-    number = models.IntegerField(null=True, blank=True)
-    nationality = models.CharField(max_length=50)
+    first_name = models.CharField(max_length=50)
+    last_name = models.CharField(max_length=50)
+    team_name = models.CharField(max_length=100)
+    country_code = models.CharField(max_length=10, blank=True)
     headshot_url = models.URLField(blank=True)
 
 class Constructor(models.Model):

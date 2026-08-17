@@ -5,4 +5,5 @@ from polls import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('index/', views.index, name='index'),
+    path('drivers/', views.drivers, name='drivers')
 ]
