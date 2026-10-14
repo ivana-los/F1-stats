@@ -7,12 +7,21 @@
     <link rel="stylesheet" href="{% static 'bootstrap.css' %}">
 </head>
 <body>
+<nav class="navbar bg-body-tertiary">
+  <div class="container-fluid bg-danger ">
+    <a class="navbar-brand text-white" href="#">Drivers</a>
+  </div>
+</nav>
 {% for driver in drivers %}
-    <div class="card">
-        <img src="{{ driver.headshot_url }}">
+<div class="card" style="width: 10rem;">
+    <img  src="{{ driver.headshot_url }}"
+        class="card-img-top"
+        alt="{{ driver.full_name }}"
+        style="height: 300px; object-fit: contain;">
+    <div class="card-body">
         <h3>{{ driver.full_name }}</h3>
-        <p>{{ driver.team_name }}</p>
-    </div>
+        <p>{{ driver.team_name }}</p></div>
+</div>
 {% endfor %}
 </body>
 </html>
